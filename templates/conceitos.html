@@ -1,0 +1,489 @@
+{% extends "base.html" %}
+
+{% block title %}Conceitos - In the Shadows{% endblock %}
+
+{% block content %}
+<div class="concepts-section">
+    <div class="section-header">
+        <h1><i class="fas fa-graduation-cap"></i> Conceitos e Prática</h1>
+        <p>Aprenda fundamentos do xadrez e pratique estratégias clássicas</p>
+        <div class="shadows-quote">
+            <blockquote>
+                <i class="fas fa-quote-left"></i>
+                "A verdadeira jogada vem daquilo que não se vê"
+                <i class="fas fa-quote-right"></i>
+            </blockquote>
+            <cite>— xKaike (chess.com), criador da estratégia "In the Shadows"</cite>
+        </div>
+    </div>
+
+    <!-- Parte 1: Fundamentos do Tabuleiro -->
+    <div class="concepts-content">
+        <div class="concept-block">
+            <h2><i class="fas fa-chess-board"></i> Fundamentos do Tabuleiro</h2>
+            
+            <div class="fundamentals-grid">
+                <div class="fundamental-card">
+                    <h3>Sistema de Coordenadas</h3>
+                    <p>O tabuleiro utiliza um sistema de coordenadas com letras (a-h) para colunas e números (1-8) para fileiras.</p>
+                    <ul>
+                        <li><strong>Colunas:</strong> a, b, c, d, e, f, g, h (da esquerda para direita)</li>
+                        <li><strong>Fileiras:</strong> 1, 2, 3, 4, 5, 6, 7, 8 (de baixo para cima - brancas)</li>
+                        <li><strong>Exemplo:</strong> e4 = coluna 'e', fileira '4'</li>
+                    </ul>
+                </div>
+                
+                <div class="fundamental-card">
+                    <h3>Valor das Peças</h3>
+                    <div class="pieces-value">
+                        <div class="piece-item">
+                            <span class="piece-symbol">♟</span>
+                            <span>Peão - 1 ponto</span>
+                        </div>
+                        <div class="piece-item">
+                            <span class="piece-symbol">♞</span>
+                            <span>Cavalo - 3 pontos</span>
+                        </div>
+                        <div class="piece-item">
+                            <span class="piece-symbol">♝</span>
+                            <span>Bispo - 3 pontos</span>
+                        </div>
+                        <div class="piece-item">
+                            <span class="piece-symbol">♜</span>
+                            <span>Torre - 5 pontos</span>
+                        </div>
+                        <div class="piece-item">
+                            <span class="piece-symbol">♛</span>
+                            <span>Dama - 9 pontos</span>
+                        </div>
+                        <div class="piece-item">
+                            <span class="piece-symbol">♚</span>
+                            <span>Rei - Inestimável</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 2: Tabuleiro Interativo -->
+        <div class="concept-block">
+            <h2><i class="fas fa-hand-pointer"></i> Tabuleiro de Prática</h2>
+            <p>Clique e arraste as peças para testar suas próprias ideias</p>
+            <div class="chess-container">
+                <div id="practice-board" class="chess-board"></div>
+                <div class="board-controls">
+                    <button id="reset-board" class="btn btn-secondary">
+                        <i class="fas fa-undo"></i>
+                        Resetar Posição
+                    </button>
+                    <button id="clear-board" class="btn btn-warning">
+                        <i class="fas fa-eraser"></i>
+                        Limpar Tabuleiro
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 3: Princípios Táticos -->
+        <div class="concept-block">
+            <h2><i class="fas fa-bolt"></i> Princípios Táticos Fundamentais</h2>
+            
+            <div class="tactics-grid">
+                <div class="tactic-card">
+                    <h3><i class="fas fa-crosshairs"></i> Pin (Cravada)</h3>
+                    <p>Ataque a uma peça que não pode se mover sem expor uma peça mais valiosa atrás dela.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Torre na coluna 'e' crava cavalo inimigo que protege o rei.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-code-branch"></i> Fork (Garfo)</h3>
+                    <p>Ataque simultâneo a duas ou mais peças inimigas com uma única peça.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Cavalo ataca rei e dama ao mesmo tempo.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-eye"></i> Descoberta</h3>
+                    <p>Ataque revelado quando uma peça se move, expondo o ataque de outra peça.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Bispo move revelando ataque da torre atrás.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-exchange-alt"></i> Deflexão</h3>
+                    <p>Forçar uma peça defensora a abandonar sua posição importante.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Sacrifício força torre a sair da defesa do rei.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-magnet"></i> Atração</h3>
+                    <p>Forçar uma peça inimiga a ocupar uma casa vulnerável.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Forçar rei a se mover para casa onde pode ser atacado.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-fire"></i> Sacrifício</h3>
+                    <p>Oferecer material para obter vantagem posicional ou tática decisiva.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Sacrificar dama para dar mate forçado.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-shield-alt"></i> Interferência</h3>
+                    <p>Bloquear a linha de comunicação entre duas peças inimigas.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Bispo bloqueia defesa entre torre e rei.
+                    </div>
+                </div>
+                
+                <div class="tactic-card">
+                    <h3><i class="fas fa-arrows-alt"></i> Duplo Ataque</h3>
+                    <p>Atacar duas peças ou pontos fracos simultaneamente.</p>
+                    <div class="tactic-example">
+                        <strong>Exemplo:</strong> Dama ataca torre e ameaça mate ao mesmo tempo.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 4: Estratégias Clássicas -->
+        <div class="concept-block">
+            <h2><i class="fas fa-crown"></i> Estratégias Clássicas</h2>
+            
+            <div class="strategies-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="gambito">Gambito da Rainha</button>
+                    <button class="tab-btn" data-tab="pastor">Mate do Pastor</button>
+                    <button class="tab-btn" data-tab="siciliana">Defesa Siciliana</button>
+                    <button class="tab-btn" data-tab="italiana">Abertura Italiana</button>
+                    <button class="tab-btn" data-tab="ruy-lopez">Ruy Lopez</button>
+                    <button class="tab-btn" data-tab="inglesa">Abertura Inglesa</button>
+                    <button class="tab-btn" data-tab="caro-kann">Defesa Caro-Kann</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="gambito" class="tab-panel active">
+                        <h3>Gambito da Rainha</h3>
+                        <div class="strategy-info">
+                            <p>Uma abertura agressiva onde as brancas sacrificam um peão para ganhar controle central.</p>
+                            <div class="moves-list">
+                                <h4>Movimentos principais:</h4>
+                                <ol>
+                                    <li>1. d4 d5</li>
+                                    <li>2. c4 (oferecendo o peão)</li>
+                                    <li>Se 2...dxc4, então 3. e3 ou 3. Nf3</li>
+                                </ol>
+                            </div>
+                            <p><strong>Objetivo:</strong> Controlar o centro e desenvolver rapidamente as peças.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="pastor" class="tab-panel">
+                        <h3>Mate do Pastor</h3>
+                        <div class="strategy-info">
+                            <p>Um ataque rápido visando o mate em poucos lances, efetivo contra iniciantes.</p>
+                            <div class="moves-list">
+                                <h4>Sequência do mate:</h4>
+                                <ol>
+                                    <li>1. e4 e5</li>
+                                    <li>2. Bc4 Nc6</li>
+                                    <li>3. Qh5 Nf6??</li>
+                                    <li>4. Qxf7# (Mate!)</li>
+                                </ol>
+                            </div>
+                            <p><strong>Atenção:</strong> Facilmente defendido por jogadores experientes.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="siciliana" class="tab-panel">
+                        <h3>Defesa Siciliana</h3>
+                        <div class="strategy-info">
+                            <p>A defesa mais popular e combativa contra 1.e4, criando jogo desequilibrado.</p>
+                            <div class="moves-list">
+                                <h4>Linha principal:</h4>
+                                <ol>
+                                    <li>1. e4 c5</li>
+                                    <li>2. Nf3 d6</li>
+                                    <li>3. d4 cxd4</li>
+                                    <li>4. Nxd4 Nf6</li>
+                                    <li>5. Nc3 a6 (Variante Najdorf)</li>
+                                </ol>
+                            </div>
+                            <p><strong>Filosofia:</strong> Controlar o centro indiretamente e buscar contra-ataques.</p>
+                            <p><strong>Variantes populares:</strong> Dragão, Najdorf, Acelerada, Paulsen</p>
+                        </div>
+                    </div>
+                    
+                    <div id="italiana" class="tab-panel">
+                        <h3>Abertura Italiana</h3>
+                        <div class="strategy-info">
+                            <p>Uma das aberturas mais antigas e respeitadas, focando no desenvolvimento rápido e controle central.</p>
+                            <div class="moves-list">
+                                <h4>Linha clássica:</h4>
+                                <ol>
+                                    <li>1. e4 e5</li>
+                                    <li>2. Nf3 Nc6</li>
+                                    <li>3. Bc4 Bc5</li>
+                                    <li>4. c3 Nf6</li>
+                                    <li>5. d4 exd4</li>
+                                    <li>6. cxd4 Bb4+</li>
+                                </ol>
+                            </div>
+                            <p><strong>Objetivo:</strong> Desenvolvimento harmônico das peças com pressão no centro.</p>
+                            <p><strong>Característica:</strong> Jogo posicional sólido com oportunidades táticas.</p>
+                            <p><strong>História:</strong> Surgiu no século XVI, usada por grandes mestres como Greco e Polerio.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="ruy-lopez" class="tab-panel">
+                        <h3>Ruy Lopez (Abertura Espanhola)</h3>
+                        <div class="strategy-info">
+                            <p>Considerada uma das aberturas mais profundas e respeitadas, usada em todos os níveis.</p>
+                            <div class="moves-list">
+                                <h4>Linha principal:</h4>
+                                <ol>
+                                    <li>1. e4 e5</li>
+                                    <li>2. Nf3 Nc6</li>
+                                    <li>3. Bb5 a6</li>
+                                    <li>4. Ba4 Nf6</li>
+                                    <li>5. O-O Be7</li>
+                                    <li>6. Re1 b5</li>
+                                    <li>7. Bb3 d6</li>
+                                </ol>
+                            </div>
+                            <p><strong>Estratégia:</strong> Pressão duradoura no centro e no lado do rei.</p>
+                            <p><strong>Sistemas:</strong> Ataque Marshall, Defesa Berlinense, Variante Breyer</p>
+                            <p><strong>História:</strong> Nomeada após o padre espanhol Ruy López (1561), estudada por Capablanca e Fischer.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="inglesa" class="tab-panel">
+                        <h3>Abertura Inglesa</h3>
+                        <div class="strategy-info">
+                            <p>Abertura flexível que pode transpor para várias estruturas, favorita dos grandes mestres.</p>
+                            <div class="moves-list">
+                                <h4>Sistemas principais:</h4>
+                                <ol>
+                                    <li>1. c4 e5</li>
+                                    <li>2. Nc3 Nf6</li>
+                                    <li>3. g3 d5</li>
+                                    <li>4. cxd5 Nxd5</li>
+                                    <li>5. Bg2 Be6</li>
+                                </ol>
+                            </div>
+                            <p><strong>Conceito:</strong> Controle do centro pelos flancos, desenvolvimento fianchetto.</p>
+                            <p><strong>Vantagens:</strong> Flexibilidade posicional e menor teoria para decorar.</p>
+                            <p><strong>História:</strong> Popularizada por Howard Staunton no século XIX, favorita de Botvinnik e Kasparov.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="caro-kann" class="tab-panel">
+                        <h3>Defesa Caro-Kann</h3>
+                        <div class="strategy-info">
+                            <p>Defesa sólida e confiável, conhecida por sua estrutura segura e jogo duradouro.</p>
+                            <div class="moves-list">
+                                <h4>Linha principal:</h4>
+                                <ol>
+                                    <li>1. e4 c6</li>
+                                    <li>2. d4 d5</li>
+                                    <li>3. Nc3 dxe4</li>
+                                    <li>4. Nxe4 Bf5</li>
+                                    <li>5. Ng3 Bg6</li>
+                                    <li>6. h4 h6</li>
+                                </ol>
+                            </div>
+                            <p><strong>Filosofia:</strong> Estrutura sólida com desenvolvimento natural do bispo problemático.</p>
+                            <p><strong>Ideal para:</strong> Jogadores posicionais que preferem estruturas seguras.</p>
+                            <p><strong>História:</strong> Criada por Horatio Caro e Marcus Kann em 1886, preferida por Petrosian e Karpov.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 4: In the Shadows em Ação -->
+        <div class="concept-block">
+            <h2><i class="fas fa-eye-slash"></i> "In the Shadows" em Ação</h2>
+            
+            <div class="shadows-examples">
+                <div class="shadow-scenario">
+                    <h3>Cenário 1: Torre Passiva</h3>
+                    <p>Inicie um Gambito da Rainha, mas mantenha uma torre aparentemente passiva na primeira fileira. 
+                    Quando o oponente se concentrar no centro, a torre desliza pela fileira para um ataque lateral devastador.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 2: Bispo Recuado</h3>
+                    <p>Durante uma Defesa Siciliana, posicione um bispo em aparente retirada. 
+                    O oponente ignora sua influência diagonal até que ele execute um sacrifício decisivo.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 3: Peão Subestimado</h3>
+                    <p>Em meio a um ataque complexo, um peão avançado é negligenciado. 
+                    No momento certo, ele promove para dama, mudando completamente o equilíbrio da partida.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 4: Cavalo Periférico</h3>
+                    <p>Posicione um cavalo em uma casa aparentemente ineficaz na borda do tabuleiro. 
+                    Durante uma sequência de trocas no centro, o cavalo salta para uma casa central 
+                    criando um garfo devastador entre rei e dama.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 5: Dama Conservadora</h3>
+                    <p>Mantenha a dama em posição defensiva enquanto executa ataques com peças menores. 
+                    O oponente relaxa a vigilância até que a dama irrompe em um ataque fulminante 
+                    através da casa que o adversário deixou desprotegida.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 6: Roque Tardio</h3>
+                    <p>Deliberadamente adie o roque criando tensão. O oponente concentra-se no centro 
+                    esperando explorar o rei desprotegido, mas o roque tardio coloca o rei em segurança 
+                    e a torre imediatamente ativa em uma coluna decisiva.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 7: Bispo Entrincheirado</h3>
+                    <p>Em uma abertura fechada, posicione um bispo atrás de uma cadeia de peões. 
+                    Quando uma troca de peões abre uma diagonal, o bispo 'adormecido' desperta 
+                    com uma descoberta que decide a partida.</p>
+                </div>
+                
+                <div class="shadow-scenario">
+                    <h3>Cenário 8: Torres Geminadas Ocultas</h3>
+                    <p>Configure torres geminadas em uma coluna aparentemente bloqueada. 
+                    Um sacrifício tático abre a coluna e as torres coordenadas entregam 
+                    um ataque irresistível à oitava fileira inimiga.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 5: Fundamentos de Finais -->
+        <div class="concept-block">
+            <h2><i class="fas fa-chess-king"></i> Fundamentos de Finais</h2>
+            
+            <div class="endgames-section">
+                <div class="endgame-category">
+                    <h3><i class="fas fa-crown"></i> Finais de Rei e Peão</h3>
+                    <ul class="endgame-list">
+                        <li><strong>Regra do Quadrado:</strong> Determine se o rei pode alcançar o peão passado</li>
+                        <li><strong>Oposição:</strong> Controle de casas-chave em finais de reis</li>
+                        <li><strong>Peões Passados:</strong> Criação e promoção de peões livres</li>
+                        <li><strong>Zugzwang:</strong> Situações onde qualquer movimento piora a posição</li>
+                    </ul>
+                </div>
+                
+                <div class="endgame-category">
+                    <h3><i class="fas fa-chess-rook"></i> Finais de Torres</h3>
+                    <ul class="endgame-list">
+                        <li><strong>Torre Ativa:</strong> Máxima atividade da torre em finais</li>
+                        <li><strong>Corte do Rei:</strong> Impedir o avanço do rei adversário</li>
+                        <li><strong>Posição de Lucena:</strong> Técnica de vitória clássica</li>
+                        <li><strong>Posição de Philidor:</strong> Técnica de empate defensivo</li>
+                    </ul>
+                </div>
+                
+                <div class="endgame-category">
+                    <h3><i class="fas fa-chess-bishop"></i> Finais de Peças Menores</h3>
+                    <ul class="endgame-list">
+                        <li><strong>Bispo vs Cavalo:</strong> Vantagens estruturais de cada peça</li>
+                        <li><strong>Finais de Cavalos:</strong> Técnicas específicas para cavalos</li>
+                        <li><strong>Bispos de Cores Opostas:</strong> Tendência ao empate</li>
+                        <li><strong>Fortalezas:</strong> Posições defensivas inexpugnáveis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 6: Glossário de Termos -->
+        <div class="concept-block">
+            <h2><i class="fas fa-book"></i> Glossário de Termos Essenciais</h2>
+            
+            <div class="glossary-grid">
+                <div class="glossary-term">
+                    <h4>Tempo</h4>
+                    <p>Unidade de medida no xadrez equivalente a um movimento. Ganhar tempo significa forçar o oponente a movimentos inúteis.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Iniciativa</h4>
+                    <p>Vantagem de quem dita o ritmo da partida, forçando o oponente a responder às suas ameaças.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Estrutura de Peões</h4>
+                    <p>Formação e disposição dos peões no tabuleiro, determinando características estratégicas da posição.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Casa Fraca</h4>
+                    <p>Casa que não pode mais ser defendida por peões, tornando-se alvo para invasão de peças inimigas.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Peão Passado</h4>
+                    <p>Peão que não tem peões inimigos impedindo seu avanço até a promoção.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Maioria de Peões</h4>
+                    <p>Superioridade numérica de peões em determinado setor do tabuleiro.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Coluna Aberta</h4>
+                    <p>Coluna sem peões, ideal para atividade das torres.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Diagonal Longa</h4>
+                    <p>Diagonais a1-h8 e h1-a8, as mais importantes para atividade dos bispos.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Outpost</h4>
+                    <p>Casa forte para uma peça (especialmente cavalo) protegida por peão e não atacável por peões inimigos.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Fianchetto</h4>
+                    <p>Desenvolvimento do bispo nas casas g2, b2, g7 ou b7, controlando diagonais longas.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Zugzwang</h4>
+                    <p>Situação onde qualquer movimento legal piora a posição do jogador obrigado a mover.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Breakthrough</h4>
+                    <p>Avanço decisivo de peões que quebra a resistência inimiga e cria peão passado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/chess.js') }}"></script>
+<script>
+    // Initialize chess board
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeChessBoard();
+        initializeTabs();
+    });
+</script>
+{% endblock %}

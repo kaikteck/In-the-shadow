@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos - In the Shadows</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2><i class="fas fa-chess-king"></i> In the Shadows</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="teoria.html" class="nav-link">Teoria</a></li>
+                <li><a href="exemplos.html" class="nav-link active">Exemplos</a></li>
+                <li><a href="conceitos.html" class="nav-link">Conceitos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div id="flash-messages" class="flash-messages" style="display: none;">
+            <div class="alert">
+                <i class="fas fa-info-circle"></i>
+                <span id="flash-text"></span>
+            </div>
+        </div>
+
+        <div class="examples-section">
+            <div class="section-header">
+                <h1><i class="fas fa-lightbulb"></i> Exemplos Práticos</h1>
+                <p>Registre e analise situações reais onde a estratégia "In the Shadows" foi aplicada</p>
+            </div>
+
+            <div class="examples-content">
+                <div class="add-example">
+                    <h2>Adicionar Novo Exemplo</h2>
+                    <form id="example-form" class="example-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome da Jogada:</label>
+                                <input type="text" id="nome" name="nome" required 
+                                       placeholder="Ex: Armadilha da Torre Silenciosa">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="situacao">Situação / Contexto:</label>
+                                <textarea id="situacao" name="situacao" rows="3" required
+                                        placeholder="Descreva o jogo, momento da partida, posição inicial..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="peca_sombra">Peça/Movimento nas Sombras:</label>
+                                <input type="text" id="peca_sombra" name="peca_sombra" required
+                                       placeholder="Ex: Torre na coluna h, aparentemente passiva">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="resultado">Golpe Final / Resultado:</label>
+                                <textarea id="resultado" name="resultado" rows="3" required
+                                        placeholder="Como a peça oculta decidiu a partida..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Adicionar Exemplo
+                        </button>
+                    </form>
+                </div>
+
+                <div class="examples-list">
+                    <h2>Seus Exemplos</h2>
+                    <div id="examples-container">
+                        <div id="empty-state" class="empty-state">
+                            <i class="fas fa-chess-knight"></i>
+                            <h3>Nenhum exemplo registrado</h3>
+                            <p>Comece adicionando seu primeiro exemplo da estratégia "In the Shadows"</p>
+                        </div>
+                        <div id="examples-grid" class="examples-grid" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><i class="fas fa-copyright"></i> 2025 "In the Shadows" Strategy - Todos os direitos reservados</p>
+            <p>Criado por <strong>xKaike</strong> (chess.com) - Estratégia original e metodologia exclusiva</p>
+            <div class="footer-social">
+                <i class="fas fa-chess"></i>
+                <span>Laboratório de Estratégias de Xadrez</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+    <script src="static/js/navigation.js"></script>
+    <script src="static/js/examples.js"></script>
+</body>
+</html>

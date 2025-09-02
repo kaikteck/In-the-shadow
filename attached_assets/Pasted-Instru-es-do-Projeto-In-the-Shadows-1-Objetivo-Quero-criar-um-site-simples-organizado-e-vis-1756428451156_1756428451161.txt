@@ -1,0 +1,134 @@
+Instruções do Projeto – "In the Shadows"
+1 - Objetivo
+
+Quero criar um site simples, organizado e visualmente limpo, que sirva como um "laboratório de estratégias" para minha ideia chamada "In the Shadows".
+
+A ideia da estratégia é a seguinte:
+
+"In the Shadows" é uma forma de jogar que confunde o oponente.
+
+Eu uso jogadas conhecidas (aberturas, defesas, ataques) só parcialmente, para que o adversário pense que sabe o que estou fazendo.
+
+Mas na verdade, isso é uma distração: a jogada real vem de uma peça ou movimento que parece irrelevante, algo que estava "nas sombras".
+
+Essa peça invisível ou despercebida é a que vai decidir a partida.
+
+O site precisa me ajudar a organizar e visualizar essas ideias.
+
+2 - Estrutura do Site
+
+Página inicial
+
+Um título chamativo: "Estratégia In the Shadows".
+
+Um pequeno texto explicando o conceito.
+
+Um botão para acessar minhas anotações de estratégias.
+
+Seção "Teoria"
+
+Um espaço onde eu posso escrever sobre o conceito da estratégia.
+
+Explicação de como funciona: abertura ilusória, manipulação psicológica e golpe final.
+
+Caixa de texto editável para eu escrever novos pensamentos.
+
+Seção "Exemplos"
+
+Quero poder registrar exemplos práticos (pode ser em xadrez, luta, e-sports etc).
+
+Cada exemplo deve ter:
+
+Nome da jogada
+
+Situação (qual jogo, em que momento usar)
+
+Qual peça/movimento está “nas sombras”
+
+O golpe final (resultado).
+
+Seção "Simulação" (extra opcional, será modificada depois)
+
+Uma área para eu anotar combinações ou movimentos passo a passo.
+
+Exemplo: "1. faço abertura X, 2. deixo parecer defesa Y, 3. uso peça escondida Z".
+
+Design
+
+Minimalista e moderno.
+
+Usar preto/cinza como cor de fundo e detalhes em vermelho (para passar a ideia de algo oculto/sombrio).
+
+Fonte clara e elegante.
+
+Botões arredondados e suaves.
+
+Importante: usar apenas HTML, CSS e JavaScript puro (sem React, sem JSON).
+
+3 - Histórico de Alterações
+
+Primeira versão: site não abria.
+
+Correção: navegação funcionando, tema escuro com vermelho, interface em português.
+
+Pedido seguinte: manter Início e Teoria, mas em Exemplos mostrar jogadas clássicas, e em Simulação adicionar tabuleiro.
+
+Alteração feita: adicionado tabuleiro interativo e jogadas clássicas (Gambito da Rainha, Mate do Pastor, Defesa Siciliana).
+
+Novo pedido: transformar "Simulação" em "Conceitos" para ser mais educativa.
+
+4 - Mudanças na seção "Conceitos"
+
+O que precisa mudar:
+
+Trocar o nome "Simulação" → "Conceitos" (menu e título).
+
+Adicionar um tabuleiro interativo com peças (para eu testar minhas próprias ideias).
+
+Permitir mover as peças no tabuleiro.
+
+Adicionar outro tabuleiro com exemplos das 3 estratégias clássicas:
+
+Gambito da Rainha
+
+Mate do Pastor
+
+Defesa Siciliana
+
+Explicação dos conceitos básicos do xadrez, incluindo:
+
+Significado das coordenadas (letras e números).
+
+Papel de cada peça.
+
+Tabuleiro marcado com letras (a-h) e números (1-8).
+
+5 - Estrutura final da seção "Conceitos"
+
+Parte 1: Fundamentos do Tabuleiro
+
+Mostrar coordenadas e explicar seu uso.
+
+Mostrar função e valor de cada peça.
+
+Parte 2: Estratégias Clássicas
+
+Gambito da Rainha → movimentos + explicação.
+
+Mate do Pastor → movimentos + explicação.
+
+Defesa Siciliana → movimentos + explicação.
+
+Parte 3: Combinações
+
+Exemplos de como usar uma estratégia seguida de outra.
+
+Exemplo: começar com Gambito da Rainha e transitar para algo parecido com Siciliana invertida.
+
+Parte 4: “In the Shadows”
+
+Cenários práticos mostrando peças ocultas decidindo a partida.
+
+Exemplos: torre passiva, bispo recuado, peão subestimado.
+
+Explicação de como a peça “nas sombras” aplica o cheque-mate.
